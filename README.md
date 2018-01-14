@@ -1,0 +1,1 @@
+NodeJS starter boilerplate for all the project in Grit which require a NodeJS API.

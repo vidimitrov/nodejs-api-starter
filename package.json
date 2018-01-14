@@ -1,0 +1,19 @@
+{
+  "name": "@grit/nodejs-api-starter",
+  "version": "0.0.1",
+  "description": "NodeJS starter boilerplate for all the project in Grit which require a NodeJS API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/grit-capital/nodejs-api-starter.git"
+  },
+  "author": "Veselin Dimitrov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/grit-capital/nodejs-api-starter/issues"
+  },
+  "homepage": "https://gitlab.com/grit-capital/nodejs-api-starter#README"
+}

@@ -18,5 +18,8 @@
   "homepage": "https://gitlab.com/grit-capital/nodejs-api-starter#README",
   "dependencies": {
     "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "mocha": "^4.1.0"
   }
 }

@@ -31,10 +31,10 @@ before(() => {
   winston.add(winston.transports.Console, { level: process.env.LOGGER_LEVEL || 'test', colorize: true });
 });
 
-beforeEach(function beforeEach() {
+beforeEach(function beforeEach () {
   this.sandbox = sinon.sandbox.create();
 });
 
-afterEach(function afterEach() {
+afterEach(function afterEach () {
   this.sandbox.restore();
 });

@@ -21,6 +21,7 @@
   "dependencies": {
     "dotenv": "^4.0.0",
     "es6-promisify": "^5.0.0",
+    "helmet": "^3.9.0",
     "joi": "^13.1.0",
     "koa": "^2.4.1",
     "koa-router": "^7.3.0",

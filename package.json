@@ -1,7 +1,7 @@
 {
-  "name": "@grit/nodejs-api-starter",
+  "name": "nodejs-api-starter",
   "version": "0.0.1",
-  "description": "NodeJS starter boilerplate for all the project in Grit which require a NodeJS API",
+  "description": "Always up to date NodeJS starter boilerplate for every project which require a NodeJS API",
   "main": "server.js",
   "scripts": {
     "start": "NODE_ENV=development nodemon ./server.js",
@@ -10,20 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/grit-capital/nodejs-api-starter.git"
+    "url": "git+ssh://git@gitlab.com/vidimitrov/nodejs-api-starter.git"
   },
   "author": "Veselin Dimitrov",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/grit-capital/nodejs-api-starter/issues"
+    "url": "https://gitlab.com/vidimitrov/nodejs-api-starter/issues"
   },
-  "homepage": "https://gitlab.com/grit-capital/nodejs-api-starter#README",
+  "homepage": "https://gitlab.com/vidimitrov/nodejs-api-starter#README",
   "dependencies": {
     "dotenv": "^4.0.0",
     "es6-promisify": "^5.0.0",
-    "helmet": "^3.9.0",
     "joi": "^13.1.0",
     "koa": "^2.4.1",
+    "koa-helmet": "^3.3.0",
     "koa-router": "^7.3.0",
     "lodash": "^4.17.4",
     "winston": "^2.4.0"

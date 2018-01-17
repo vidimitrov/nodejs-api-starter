@@ -4,6 +4,7 @@ const http = require('http');
 const promisify = require('es6-promisify');
 const logger = require('winston');
 const Koa = require('koa');
+const helmet = require('helmet');
 const config = require('./config');
 const router = require('./src/router');
 
@@ -11,7 +12,8 @@ const app = new Koa();
 
 app
   .use(router.routes())
-  .use(router.allowedMethods());
+  .use(router.allowedMethods())
+  .use(helmet());
 
 const server = http.createServer(app.callback());
 

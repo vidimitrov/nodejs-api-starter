@@ -4,7 +4,7 @@
   "description": "Always up to date NodeJS starter boilerplate for every project which require a NodeJS API",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=development nodemon ./server.js",
+    "start": "pm2 start process.yml",
     "test": "NODE_ENV=test mocha --exit --require co-mocha test/setup.js 'src/**/*.spec.js'",
     "lint": "eslint ."
   },
@@ -26,6 +26,7 @@
     "koa-helmet": "^3.3.0",
     "koa-router": "^7.3.0",
     "lodash": "^4.17.4",
+    "pm2": "^2.9.3",
     "winston": "^2.4.0"
   },
   "devDependencies": {

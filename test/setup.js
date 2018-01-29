@@ -1,5 +1,3 @@
-'use strict';
-
 const sinon = require('sinon');
 const chai = require('chai');
 const sinonChai = require('sinon-chai');
@@ -17,7 +15,7 @@ before(() => {
     warning: 3,
     error: 2,
     critical: 1,
-    test: 0
+    test: 0,
   });
   winston.addColors({
     debug: 'green',
@@ -25,16 +23,16 @@ before(() => {
     warn: 'yellow',
     error: 'red',
     critical: 'red',
-    test: 'blue'
+    test: 'blue',
   });
   winston.remove(winston.transports.Console);
   winston.add(winston.transports.Console, { level: process.env.LOGGER_LEVEL || 'test', colorize: true });
 });
 
-beforeEach(function beforeEach () {
+beforeEach(function beforeEach() {
   this.sandbox = sinon.sandbox.create();
 });
 
-afterEach(function afterEach () {
+afterEach(function afterEach() {
   this.sandbox.restore();
 });

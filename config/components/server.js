@@ -1,10 +1,8 @@
-'use strict';
-
 const joi = require('joi');
 
 const envVarsSchema = joi.object({
   PORT: joi.number()
-    .required()
+    .required(),
 }).unknown()
   .required();
 
@@ -16,8 +14,8 @@ if (error) {
 
 const config = {
   server: {
-    port: envVars.PORT
-  }
+    port: envVars.PORT,
+  },
 };
 
 module.exports = config;

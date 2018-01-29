@@ -1,7 +1,5 @@
 /* eslint-disable global-require, import/no-dynamic-require */
 
-'use strict';
-
 // Load .env in local development
 if (process.env.NODE_ENV === 'development') {
   require('dotenv').config({ silent: true });

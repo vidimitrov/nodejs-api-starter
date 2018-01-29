@@ -1,10 +1,8 @@
-'use strict';
-
 const http = require('http');
 const promisify = require('es6-promisify');
 const logger = require('winston');
 const Koa = require('koa');
-const helmet = require('helmet');
+const helmet = require('koa-helmet');
 const config = require('./config');
 const router = require('./src/router');
 
@@ -18,6 +16,7 @@ app
 const server = http.createServer(app.callback());
 
 const serverListen = promisify(server.listen, server);
+
 serverListen(config.server.port)
   .then(() => logger.info(`App is listening on port ${config.server.port}`))
   .catch((err) => {

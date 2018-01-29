@@ -1,11 +1,9 @@
-'use strict';
-
 const joi = require('joi');
 
 const envVarsSchema = joi.object({
   NODE_ENV: joi.string()
     .allow(['development', 'test', 'staging', 'production'])
-    .required()
+    .required(),
 }).unknown()
   .required();
 
@@ -16,7 +14,7 @@ if (error) {
 }
 
 const config = {
-  env: envVars.NODE_ENV
+  env: envVars.NODE_ENV,
 };
 
 module.exports = config;

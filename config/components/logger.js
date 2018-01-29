@@ -1,5 +1,3 @@
-'use strict';
-
 const joi = require('joi');
 const winston = require('winston');
 
@@ -12,7 +10,7 @@ const envVarsSchema = joi.object({
     .truthy('true')
     .falsy('FALSE')
     .falsy('false')
-    .default(true)
+    .default(true),
 }).unknown()
   .required();
 
@@ -25,8 +23,8 @@ if (error) {
 const config = {
   logger: {
     level: envVars.LOGGER_LEVEL,
-    enabled: envVars.LOGGER_ENABLED
-  }
+    enabled: envVars.LOGGER_ENABLED,
+  },
 };
 
 winston.level = config.logger.level;

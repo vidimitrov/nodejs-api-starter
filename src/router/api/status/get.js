@@ -1,8 +1,8 @@
-'use strict';
-
-function getApiStatus (ctx) {
+const get = (ctx) => {
   ctx.body = 'Everything is up and running...';
   ctx.status = 200;
-}
+};
 
-module.exports = getApiStatus;
+module.exports = {
+  get,
+};

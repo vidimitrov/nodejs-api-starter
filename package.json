@@ -4,7 +4,7 @@
   "description": "Always up to date NodeJS starter boilerplate for every project which require a NodeJS API",
   "main": "server.js",
   "scripts": {
-    "start": "pm2 start process.yml",
+    "start": "pm2 start ecosystem.config.js",
     "test": "NODE_ENV=test mocha --exit --require co-mocha test/setup.js 'src/**/*.spec.js'",
     "lint": "eslint ."
   },

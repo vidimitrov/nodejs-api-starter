@@ -1,9 +1,11 @@
 {
-    "env": {
-        "node": true, // this is the best starting point
-        "mocha": true,
-        "es6": true // enables es6 features
-    },
-    "parser": "babel-eslint", // needed to make babel stuff work properly
-    "extends": "airbnb-base"
+  "extends": "airbnb-base",
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "rules": {
+    "func-names": 0
+  }
 }

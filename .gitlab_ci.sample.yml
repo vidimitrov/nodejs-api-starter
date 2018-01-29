@@ -1,0 +1,43 @@
+job_test:
+  stage: test
+  script:
+    - npm install
+    - npm run lint
+    - npm run test
+  tags:
+    - api
+job_deploy_staging:
+  stage: deploy
+  environment:
+    name: staging
+  script:
+    - cd /srv/<* staging-api-folder-here *>/app
+    - git fetch origin
+    - git checkout $CI_BUILD_REF
+    - npm install --production
+    - pm2 restart ~/ecosystem.json --only < staging-api-process-name >
+  tags:
+    - api
+    - staging
+  only:
+    - master
+job_deploy_production:
+  stage: deploy
+  when: manual
+  environment:
+    name: production
+    url: 'http://api.goseemba.com'
+  script:
+    - cd /srv/<* api-folder-here *>/app
+    - git fetch origin
+    - git checkout $CI_BUILD_REF
+    - npm install --production
+    - pm2 restart ~/ecosystem.json --only < api-process-name >
+  tags:
+    - api
+    - production
+  only:
+    - master
+stages:
+  - test
+  - deploy

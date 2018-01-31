@@ -1,22 +1,22 @@
-# This file is a template, and might need editing before it works on your project.
-# Official framework image. Look for the different tagged releases at:
-# https://hub.docker.com/r/library/node/tags/
-image: node:latest
-
-# Pick zero or more services to be used on all builds.
-# Only needed when using a docker container to run your tests in.
-# Check out: http://docs.gitlab.com/ce/ci/docker/using_docker_images.html#what-is-a-service
+image: 'node:latest'
 services:
-  - redis:latest
-  - postgres:latest
-
-# This folder is cached between builds
-# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
+  - 'redis:latest'
+  - 'postgres:latest'
 cache:
   paths:
-  - node_modules/
-
+    - node_modules/
 test:
   script:
-   - npm install
-   - npm run test
+    - npm install
+    - npm run test
+deploy:
+  stage: deploy
+  environment:
+    name: production
+    url: null
+  script:
+    - cd /var/www/nodejs-api-starter/app
+    - git fetch origin
+    - git checkout master
+    - npm install --production
+    - pm2 restart ecosystem.config.js

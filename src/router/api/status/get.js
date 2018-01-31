@@ -1,5 +1,5 @@
 const get = (ctx) => {
-  ctx.body = 'NodeJS API Starter kit is up and running...';
+  ctx.body = 'NodeJS API starter kit is up and running...';
   ctx.status = 200;
 };
 

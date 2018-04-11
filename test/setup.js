@@ -8,7 +8,8 @@ process.env.PORT = 3000;
 before(() => {
   chai.use(sinonChai);
 
-  // we want to have logger.test() without flooding the console with other levels' messages
+  // We want to have logger.test() without flooding
+  // the console with other levels' messages
   winston.setLevels({
     debug: 5,
     info: 4,
@@ -26,7 +27,10 @@ before(() => {
     test: 'blue',
   });
   winston.remove(winston.transports.Console);
-  winston.add(winston.transports.Console, { level: process.env.LOGGER_LEVEL || 'test', colorize: true });
+  winston.add(winston.transports.Console, {
+    level: process.env.LOGGER_LEVEL || 'test',
+    colorize: true,
+  });
 });
 
 beforeEach(function beforeEach() {

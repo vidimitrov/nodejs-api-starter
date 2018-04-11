@@ -2,7 +2,7 @@
 
 // Load .env in local development
 if (process.env.NODE_ENV === 'development') {
-  require('dotenv').config({ silent: true });
+  require('dotenv').config({silent: true});
 }
 
 const common = require('./components/common');

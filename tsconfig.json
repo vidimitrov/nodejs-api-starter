@@ -8,14 +8,21 @@
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": ".",
-    "paths": {
-      "*": [
-        "node_modules/*",
-        "src/types/*"
-      ]
-    }
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/koa-bodyparser",
+      "node_modules/@types"
+    ],
   },
   "include": [
-    "src/**/*"
-  ]
+    "src/**/*.ts",
+    "config/**/*.ts",
+    "node_modules/@types/jest",
+    "node_modules/@types/node",
+    "node_modules/@types/koa",
+    "node_modules/@types/koa-bodyparser",
+  ],
+  "exclude": []
 }
